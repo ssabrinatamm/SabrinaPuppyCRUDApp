@@ -22,7 +22,7 @@ const authConfig = {
   baseUrl: "https://api.asgardeo.io/t/sabtamorg",
   signInRedirectURL: window.location.origin,
   signOutRedirectURL: window.location.origin,
-  scope: ["openid", "profile"]
+  scopes: "openid profile"
 };
 
 createRoot(document.getElementById('root')).render(
