@@ -68,7 +68,7 @@ const sequelize = new Sequelize(
     name:  { type: DataTypes.TEXT(), allowNull: false },
     breed:   { type: DataTypes.TEXT(), allowNull: false },
     age:       { type: DataTypes.INTEGER(), allowNull: false },
-    user_id:  { type: DataTypes.TEXT(), allowNull: false },
+    user_id:  { type: DataTypes.TEXT(), allowNull: true },
   }, { schema: DB_SCHEMA, tableName: 'puppies', timestamps: false });
   
   // ASGARDEO AUTH MIDDLEWARE 
