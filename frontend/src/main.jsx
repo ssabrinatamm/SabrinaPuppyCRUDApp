@@ -21,8 +21,8 @@ createRoot(document.getElementById('root')).render(
     <AsgardeoProvider
       clientId="UpgcjVlB3dRT5WGqHzBmAVC3BjIa"
       baseUrl="https://api.asgardeo.io/t/sabtamorg"
-      signInRedirectURL="http://localhost:5173/"
-      signOutRedirectURL="http://localhost:5173/"
+      signInRedirectURL={window.location.origin}
+      signOutRedirectURL={window.location.origin}
       scopes="openid profile"
     >
       <App />
