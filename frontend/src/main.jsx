@@ -17,21 +17,39 @@ import App from './App.jsx'
 import { AsgardeoProvider } from '@asgardeo/react'
 // import { AuthProvider } from '@asgardeo/react'
 
-const authConfig = {
-  clientId: "UpgcjVlB3dRT5WGqHzBmAVC3BjIa",
-  baseUrl: "https://api.asgardeo.io/t/sabtamorg",
-  signInRedirectURL: window.location.origin,
-  signOutRedirectURL: window.location.origin,
-  scopes: "openid profile"
-};
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import { AsgardeoProvider } from '@asgardeo/react'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AsgardeoProvider config={authConfig}>
+    <AsgardeoProvider
+      clientId="UpgcjVlB3dRT5WGqHzBmAVC3BjIa"
+      baseUrl="https://api.asgardeo.io/t/sabtamorg"
+      scopes="openid profile"
+    >
       <App />
     </AsgardeoProvider>
   </StrictMode>
 )
+
+// const authConfig = {
+//   clientId: "UpgcjVlB3dRT5WGqHzBmAVC3BjIa",
+//   baseUrl: "https://api.asgardeo.io/t/sabtamorg",
+//   signInRedirectURL: window.location.origin,
+//   signOutRedirectURL: window.location.origin,
+//   scopes: "openid profile"
+// };
+
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <AsgardeoProvider config={authConfig}>
+//       <App />
+//     </AsgardeoProvider>
+//   </StrictMode>
+// )
 
 // createRoot(document.getElementById('root')).render(
 //   <StrictMode>
