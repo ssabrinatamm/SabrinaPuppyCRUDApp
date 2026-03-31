@@ -15,7 +15,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { AsgardeoProvider } from '@asgardeo/react'
-import { AuthProvider } from '@asgardeo/react'
+// import { AuthProvider } from '@asgardeo/react'
 
 const authConfig = {
   clientId: "UpgcjVlB3dRT5WGqHzBmAVC3BjIa",
@@ -27,9 +27,9 @@ const authConfig = {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider config={authConfig}>
+    <AsgardeoProvider config={authConfig}>
       <App />
-    </AuthProvider>
+    </AsgardeoProvider>
   </StrictMode>
 )
 
